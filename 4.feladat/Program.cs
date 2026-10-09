@@ -11,9 +11,21 @@ namespace _4.feladat
         static void Main(string[] args)
         {
             Console.Write("Kérek egy számot: ");
-            string szam = Console.ReadLine();
+            //string szam = Console.ReadLine();
 
-            Console.WriteLine($"A szám {szam.Length} jegyű");
+            //Console.WriteLine($"A szám {szam.Length} jegyű");
+
+            int szam = int.Parse(Console.ReadLine());
+            int szamlal = 0;
+
+            while (szam >= 10)
+            {
+                szam = szam / 10;
+                szamlal++;
+            }
+
+            Console.WriteLine($"A szám {szamlal+1} jegyű");
+
 
             Console.ReadKey();
         }
